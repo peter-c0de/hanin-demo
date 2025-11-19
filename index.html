@@ -9,10 +9,9 @@
   <!-- Font Awesome for icons (optional) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* Colors & spacing tuned to match the screenshot */
     :root{
-      --accent-teal: #17c1cf; /* big Profile title */
-      --accent-orange: #ef5f44; /* right card */
+      --accent-teal: #17c1cf;
+      --accent-orange: #ef5f44;
       --bg-offwhite: #f6f7f7;
       --text-dark: #222;
     }
@@ -21,7 +20,7 @@
       background: var(--bg-offwhite);
       color: var(--text-dark);
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      direction: ltr; /* keep layout LTR like screenshot; change if you want RTL */
+      direction: ltr;
     }
 
     .profile-title{
@@ -49,7 +48,6 @@
       letter-spacing: .6px;
     }
 
-    /* Right orange panel */
     .side-card{
       background: var(--accent-orange);
       color: #fff;
@@ -61,7 +59,7 @@
       display:flex;
       flex-direction:column;
       align-items:center;
-      justify-content:flex-center;
+      /* justify-content:flex-center; */
       text-align:center;
     }
 
@@ -79,7 +77,12 @@
       box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     }
 
-    .avatar-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+    .avatar-wrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
 
     .hello{
       font-weight:800;
@@ -87,24 +90,28 @@
       letter-spacing: .6px;
     }
 
-    .side-card p{max-width:320px;margin:12px auto 18px;line-height:1.5}
+    .side-card p{
+      max-width:320px;
+      margin:12px auto 18px;
+      line-height:1.5;
+    }
 
     .social a{color:#fff;margin:0 8px;font-size:18px}
 
-    /* Responsive behaviour */
+    /* Responsiveness */
     @media (max-width: 991px){
       .side-card{min-height:340px;padding-top:72px}
       .avatar-wrap{top:-60px;width:120px;height:120px}
     }
-
   </style>
 </head>
 <body>
   <section class="py-5 my-5">
     <div class="container">
-      <div class="row gx-5 align-items-center">
+      <!-- <div class="row gx-5 align-items-center"> -->
+      <div class="row gx-5 align-items-start">
         <!-- Left column (main content) -->
-        <div class="col-lg-7 my-5">
+        <div class="col-lg-7 my-4">
           <h1 class="profile-title">Frau Hanin</h1>
           <p class="subtle mb-4">Deutschlehrerin</p>
 
@@ -112,17 +119,27 @@
             <h4 class="mb-3">Über mich</h4>
             <p class="about-text" style="color:#515151;line-height:1.8;">Ich bin Frau Hanin, Online-Deutschlehrerin und Chemieingenieurin. Ich helfe Ihnen gerne beim Deutschlernen.</p>
             
+            <h4>Unser Plan</h4>
+            
+            <!-- ✅ Responsive Video -->
+            <div class="ratio ratio-16x9 my-3">
+              <video controls>
+                <source src="assets/our_plan.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
             <div class="my-5">
-              <a class="contact-btn" href="tel:+201001607654">Kontaktiere mich</a>
+              <a class="contact-btn" href="tel:+201001607654">Kontakt</a>
             </div>
           </div>
         </div>
 
         <!-- Right column (side card) -->
-        <div class="col-lg-5 d-flex justify-content-center">
+        <div class="col-lg-5 d-flex justify-content-center my-5">
           <div class="side-card w-100">
             <div class="avatar-wrap">
-              <img src="frau_hanin.jpg" alt="avatar">
+              <img src="assets/hanin.jpeg" alt="avatar">
             </div>
 
             <div style="margin-top:40px">
